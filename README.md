@@ -126,6 +126,6 @@ This solution is more efficient than the initial array-based approach, especiall
 
 ## Conclusion
 
-I hope this explanation of my thought process and the provided solution is helpful. Please let me know if you have any further questions or if there's anything else I can do to assist with the internship application.
+I had fun time writing out these implementations. Trie is definitly interresting one. While the basic Trie solution I provided is effective, I know there are more advanced variants that can offer even better performance. One such implementation is the Pruning Radix Trie, which is considered a state-of-the-art approach for large dictionaries. I would love to learn more about this and other Trie optimizations, but I think that would be beyond the scope of what was required for this particular task.
 
 Thank you for your time and consideration.
