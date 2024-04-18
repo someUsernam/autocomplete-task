@@ -1,11 +1,3 @@
-# Assignment Submission
-
-Hello,
-
-I hope this message finds you well. I am writing to submit the assignment you provided for the internship position.
-
-First, let me express my gratitude for the opportunity to demonstrate my skills and problem-solving abilities. I was excited to receive your email and dive into the task at hand.
-
 ## Assignment Solution
 
 I have provided two solutions to the auto-completion problem.
