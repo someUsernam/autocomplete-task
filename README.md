@@ -10,9 +10,9 @@ First, let me express my gratitude for the opportunity to demonstrate my skills 
 
 As per your instructions, I have provided two solutions to the auto-completion problem.
 
-### Solution 1: AutoComplete Class
+### Solution 1: WordDictionary List
 
-My initial intuitive approach was to use a simple ArrayList, `AutoComplete`, that stores the dictionary in an array and uses the `filter` method to find the auto-completion candidates. This solution is straightforward and easy to understand.
+My initial intuitive approach was to use a simple ArrayList, `WordDictionary`, that stores the dictionary in an array and uses the `filter` method to find the auto-completion candidates. This solution is straightforward and easy to understand.
 
 However, it may not be the most efficient for large dictionaries, as the search time would be proportional to the size of the dictionary.
 
