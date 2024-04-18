@@ -12,7 +12,7 @@ As per your instructions, I have provided two solutions to the auto-completion p
 
 ### Solution 1: AutoComplete Class
 
-My initial intuitive approach was to use a simple class, `AutoComplete`, that stores the dictionary in an array and uses the `filter` method to find the auto-completion candidates. This solution is straightforward and easy to understand.
+My initial intuitive approach was to use a simple ArrayList, `AutoComplete`, that stores the dictionary in an array and uses the `filter` method to find the auto-completion candidates. This solution is straightforward and easy to understand.
 
 However, it may not be the most efficient for large dictionaries, as the search time would be proportional to the size of the dictionary.
 
