@@ -26,7 +26,7 @@ However, after further consideration, I realized that a more scalable and effici
 
 The `WordDictionary` class I've provided uses a Trie-based implementation. It has two main methods:
 
-##### `addWord(word)`
+##### `insert(word)`
 
 This method adds a word to the dictionary by building a tree-like structure, where each node represents a character in the word.
 
@@ -58,7 +58,7 @@ class WordDictionary {
 		this.root = new WordDictionaryNode();
 	}
 
-	addWord(word: string) {
+	insert(word: string) {
 		let node = this.root;
 		for (const char of word) {
 			let currentNode = node.children.get(char);
@@ -98,11 +98,11 @@ class WordDictionary {
 }
 
 const autoComplete = new WordDictionary();
-autoComplete.addWord("car");
-autoComplete.addWord("carpet");
-autoComplete.addWord("java");
-autoComplete.addWord("javascript");
-autoComplete.addWord("internet");
+autoComplete.insert("car");
+autoComplete.insert("carpet");
+autoComplete.insert("java");
+autoComplete.insert("javascript");
+autoComplete.insert("internet");
 
 console.log(autoComplete.search("c"));
 console.log(autoComplete.search("car"));
