@@ -8,7 +8,7 @@ My initial intuitive approach was to use a simple ArrayList, `WordDictionary`, t
 
 However, it may not be the most efficient for large dictionaries, as the search time would be proportional to the size of the dictionary.
 
-[Solution](https://github.com/someUsernam/autocomplete-task/blob/main/src/wordDictionary-List.ts)
+Link:[Solution](https://github.com/someUsernam/autocomplete-task/blob/main/src/wordDictionary-List.ts)
 
 ### Solution 2: WordDictionary Trie (better performance)
 
@@ -19,7 +19,7 @@ However, after further consideration, I realized that a more scalable and effici
 I have also attached tests for this implementation:
 [TESTS](https://github.com/someUsernam/autocomplete-task/blob/main/src/__tests__/wordDictionary-Trie.test.ts)
 
-you can clone repo and run this command `npm run test` to test this implementation;
+you can clone repo and add run this command `npm run test` to test this implementation;
 
 #### WordDictionary Class
 
@@ -32,6 +32,8 @@ This method adds a word to the dictionary by building a tree-like structure, whe
 ##### `search(query: string): string[]`
 
 This method takes a prefix as input and returns a list of all words in the dictionary that start with that prefix. It achieves this by performing a depth-first search (DFS) on the Trie structure, starting from the node that represents the given prefix.
+
+Link:[Solution](https://github.com/someUsernam/autocomplete-task/blob/main/src/wordDictionary-Trie.ts)
 
 ```javascript
 class WordDictionaryNode {
@@ -72,6 +74,8 @@ class WordDictionary {
 	}
 
 	search(query: string): string[] {
+		if (query.length === 0) return [];
+
 		let node = this.root;
 		for (const char of query) {
 			const currentNode = node.children.get(char);
@@ -112,9 +116,9 @@ console.log(wordDictionary.search("foo"));
 ```
 ## Time Complexity
 
-The time complexity of the `addWord` method is O(k), where k is the length of the word being added, as we need to traverse the Trie and create new nodes for each character in the word.
+The time complexity of the `addWord` method is O(n), where n is the length of the word being added, as we need to traverse the Trie and create new nodes for each character in the word.
 
-The time complexity of the `search` method is O(k + m), where k is the length of the prefix and m is the number of matching words, as we need to traverse the Trie to find the matching words and then return them.
+The time complexity of the `search` method is O(n + m), where n is the length of the prefix and m is the number of matching words, as we need to traverse the Trie to find the matching words and then return them.
 
 This solution is more efficient than the initial array-based approach, especially for large dictionaries, as the search time is not dependent on the size of the dictionary, but rather on the length of the prefix.
 

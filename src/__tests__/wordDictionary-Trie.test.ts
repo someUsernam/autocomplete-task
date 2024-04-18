@@ -1,3 +1,4 @@
+import { faker } from "@faker-js/faker";
 import { describe, expect, it } from "vitest";
 import { WordDictionary } from "../wordDictionary-Trie";
 import { generatedNames } from "./generatedNames";
@@ -54,24 +55,12 @@ describe("WordDictionary-Trie", () => {
 			insertManyWords(wordDictionary, words);
 
 			// when
-			const partialPhrase1 = wordDictionary.search(word);
+			const result = wordDictionary.search(word);
 
 			// then
-			expect(partialPhrase1).toEqual(expectedResult);
+			expect(result).toEqual(expectedResult);
 		},
 	);
-
-	it("should not throw error when 10,000 word search", () => {
-		// given
-		const wordDictionary = new WordDictionary();
-		insertManyWords(wordDictionary, generatedNames);
-
-		// then
-		expect(() => {
-			// when
-			wordDictionary.search("a");
-		}).not.toThrow();
-	});
 
 	it("should return empty search result when there is no words", () => {
 		// given
@@ -96,15 +85,30 @@ describe("WordDictionary-Trie", () => {
 		expect(result).toEqual([]);
 	});
 
-	it("should return string array when 10000 words are passed", () => {
+	it("should return results when 10,000 words are inserted", () => {
 		// given
 		const wordDictionary = new WordDictionary();
 		insertManyWords(wordDictionary, generatedNames);
 
 		// when
-		const result = wordDictionary.search("a");
+		const result = wordDictionary.search("A");
 
 		// then
-		expect(result).toEqual(expect.any(Array));
+		expect(result.length).toBeGreaterThan(0);
+	});
+
+	it("should not throw error when 1 million word search", () => {
+		// given
+		const wordDictionary = new WordDictionary();
+		const words = Array.from({ length: 1000000 }, () =>
+			faker.person.firstName(),
+		);
+		insertManyWords(wordDictionary, words);
+
+		// then
+		expect(() => {
+			// when
+			wordDictionary.search("A");
+		}).not.toThrow();
 	});
 });
