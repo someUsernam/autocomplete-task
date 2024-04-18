@@ -26,6 +26,7 @@ However, after further consideration, I realized that a more scalable and effici
 
 I have also attached tests for this implementation:
 [TESTS](https://github.com/someUsernam/autocomplete-task/blob/main/src/__tests__/wordDictionary-Trie.test.ts)
+you can clone repo and add run this command `npm run test` to test these implementation;
 
 #### WordDictionary Class
 
