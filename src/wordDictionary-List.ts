@@ -10,6 +10,7 @@ class WordDictionary {
 	}
 
 	search(query: string): string[] {
+		if (query.length === 0) return [];
 		return this.dictionary.filter((word) => word.startsWith(query));
 	}
 }
