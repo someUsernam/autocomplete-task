@@ -18,9 +18,9 @@ However, it may not be the most efficient for large dictionaries, as the search 
 
 [Solution](https://github.com/someUsernam/autocomplete-task/blob/main/src/wordDictionary-List.ts)
 
-However, after further consideration, I realized that a more scalable and efficient solution would be to use a data structure called a "Trie" or "Prefix Tree". This data structure allows for fast prefix-based searches, which is exactly what we need for the auto-completion feature.
-
 ### Solution 2: WordDictionary Trie (better performance)
+
+However, after further consideration, I realized that a more scalable and efficient solution would be to use a data structure called a "Trie" or "Prefix Tree". This data structure allows for fast prefix-based searches, which is exactly what we need for the auto-completion feature.
 
 #### WordDictionary Class
 
