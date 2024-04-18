@@ -25,11 +25,11 @@ you can clone repo and run this command `npm run test` to test this implementati
 
 The `WordDictionary` class I've provided uses a Trie-based implementation. It has two main methods:
 
-##### `insert(word)`
+##### `insert(word: string): void`
 
 This method adds a word to the dictionary by building a tree-like structure, where each node represents a character in the word.
 
-##### `search(query)`
+##### `search(query: string): string[]`
 
 This method takes a prefix as input and returns a list of all words in the dictionary that start with that prefix. It achieves this by performing a depth-first search (DFS) on the Trie structure, starting from the node that represents the given prefix.
 
