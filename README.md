@@ -26,6 +26,11 @@ However, after further consideration, I realized that a more scalable and effici
 
 The `WordDictionary` class I've provided uses a Trie-based implementation. It has two main methods:
 
+#### Tests
+
+I have also attached tests for this implementation:
+[TESTS](https://github.com/someUsernam/autocomplete-task/blob/main/src/__tests__/wordDictionary-Trie.test.ts)
+
 ##### `insert(word)`
 
 This method adds a word to the dictionary by building a tree-like structure, where each node represents a character in the word.
@@ -97,19 +102,19 @@ class WordDictionary {
 	}
 }
 
-const autoComplete = new WordDictionary();
-autoComplete.insert("car");
-autoComplete.insert("carpet");
-autoComplete.insert("java");
-autoComplete.insert("javascript");
-autoComplete.insert("internet");
+const wordDictionary = new WordDictionary();
+wordDictionary.insert("car");
+wordDictionary.insert("carpet");
+wordDictionary.insert("java");
+wordDictionary.insert("javascript");
+wordDictionary.insert("internet");
 
-console.log(autoComplete.search("c"));
-console.log(autoComplete.search("car"));
-console.log(autoComplete.search("carp"));
-console.log(autoComplete.search("jav"));
-console.log(autoComplete.search("intern"));
-console.log(autoComplete.search("foo"));
+console.log(wordDictionary.search("c"));
+console.log(wordDictionary.search("car"));
+console.log(wordDictionary.search("carp"));
+console.log(wordDictionary.search("jav"));
+console.log(wordDictionary.search("intern"));
+console.log(wordDictionary.search("foo"));
 ```
 ## Time Complexity
 
