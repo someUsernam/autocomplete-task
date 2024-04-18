@@ -16,40 +16,11 @@ My initial intuitive approach was to use a simple ArrayList, `WordDictionary`, t
 
 However, it may not be the most efficient for large dictionaries, as the search time would be proportional to the size of the dictionary.
 
-```javascript
-class WordDictionary {
-	dictionary: string[];
+Solution: https://github.com/someUsernam/autocomplete-task/blob/main/src/wordDictionary-List.ts
 
-	constructor() {
-		this.dictionary = [];
-	}
-
-	insert(word: string) {
-		this.dictionary.push(word);
-	}
-
-	search(query: string): string[] {
-		return this.dictionary.filter((word) => word.startsWith(query));
-	}
-}
-
-const autoComplete = new WordDictionary();
-autoComplete.insert("car");
-autoComplete.insert("carpet");
-autoComplete.insert("java");
-autoComplete.insert("javascript");
-autoComplete.insert("internet");
-
-console.log(autoComplete.search("c"));
-console.log(autoComplete.search("car"));
-console.log(autoComplete.search("carp"));
-console.log(autoComplete.search("jav"));
-console.log(autoComplete.search("intern"));
-console.log(autoComplete.search("foo"));
-```
 However, after further consideration, I realized that a more scalable and efficient solution would be to use a data structure called a "Trie" or "Prefix Tree". This data structure allows for fast prefix-based searches, which is exactly what we need for the auto-completion feature.
 
-## Solution 2: WordDictionary Trie
+## Solution 2: WordDictionary Trie (better performance)
 
 ### WordDictionary Class
 
