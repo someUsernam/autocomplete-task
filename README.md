@@ -140,4 +140,16 @@ console.log(autoComplete.search("jav"));
 console.log(autoComplete.search("intern"));
 console.log(autoComplete.search("foo"));
 ```
+## Time Complexity
 
+The time complexity of the `addWord` method is O(k), where k is the length of the word being added, as we need to traverse the Trie and create new nodes for each character in the word.
+
+The time complexity of the `search` method is O(k + m), where k is the length of the prefix and m is the number of matching words, as we need to traverse the Trie to find the matching words and then return them.
+
+This solution is more efficient than the initial array-based approach, especially for large dictionaries, as the search time is not dependent on the size of the dictionary, but rather on the length of the prefix.
+
+## Conclusion
+
+I hope this explanation of my thought process and the provided solution is helpful. Please let me know if you have any further questions or if there's anything else I can do to assist with the internship application.
+
+Thank you for your time and consideration.
