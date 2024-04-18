@@ -20,17 +20,17 @@ Solution: https://github.com/someUsernam/autocomplete-task/blob/main/src/wordDic
 
 However, after further consideration, I realized that a more scalable and efficient solution would be to use a data structure called a "Trie" or "Prefix Tree". This data structure allows for fast prefix-based searches, which is exactly what we need for the auto-completion feature.
 
-## Solution 2: WordDictionary Trie (better performance)
+### Solution 2: WordDictionary Trie (better performance)
 
-### WordDictionary Class
+#### WordDictionary Class
 
 The `WordDictionary` class I've provided uses a Trie-based implementation. It has two main methods:
 
-#### `addWord(word)`
+##### `addWord(word)`
 
 This method adds a word to the dictionary by building a tree-like structure, where each node represents a character in the word.
 
-#### `search(query)`
+##### `search(query)`
 
 This method takes a prefix as input and returns a list of all words in the dictionary that start with that prefix. It achieves this by performing a depth-first search (DFS) on the Trie structure, starting from the node that represents the given prefix.
 
